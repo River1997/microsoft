@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                        <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Document</title>
+
+    <style>
+            body{margin: 0;}
+            *{box-sizing: border-box;
+             }
+
+            nav .top{
+                width: 100%;
+                height: 50px;
+                border-bottom: 1px solid gray;
+                display: flex;
+                justify-content: space-between;
+                position: fixed;
+                top: 0px;
+                left: 0px;
+
+            }
+            .discover{
+                width: 176px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .logo{
+               height: 30px;
+               width: 30px;
+               background-image: url(http://pngimg.com/uploads/twitch/twitch_PNG6.png);
+               background-position: 0px;
+               background-size: cover;
+            }
+
+            .browse{
+               width: 76px;
+               height: 50px;
+               line-height: 50px;
+               padding: 0 19px;
+
+            }
+
+            .more{
+               width: 25px;
+               height: 30px;
+               background-image: url(https://static.thenounproject.com/png/658625-200.png);
+               background-position: center;
+               background-size: cover;
+            }
+            .search{
+                width: 390px;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .input{
+                width: 355px;
+                height: 36px;
+                border: none;
+                background-color: rgb(226, 226, 226);
+                border-radius: 10px;
+                padding: 0 0 0 7px;
+            }
+
+            .search-btn{
+               width: 35px;
+               height: 36px;
+               background-image: url(https://img.88icon.com/download/jpg/20200730/2f6b9cd24c6d8fad96bc0241c6c7e906_512_512.jpg!88con);
+               background-size: 80%;
+               background-repeat: no-repeat;
+               background-position: center;
+               background-color: rgb(249,249,249);
+               border-radius: 0px 5px 5px 0px;
+
+            }
+                        
+            .option{
+                width: 190px;
+                height: 100%;
+                /* background-color: black; */
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .notification{
+            width: 20px;
+            height: 20px;
+
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjrsasosqnAH_cc4n2kLdi8Wn77qEwdrZReaTihoAepGjsQlh2m7CcbpbzvO0q1kYDPvM&usqp=CAU);
+            background-position: center;
+            background-size: cover;
+
+        }
+        .login{
+            width: 46px;
+            height: 31px;
+            border-radius: 5px;
+            
+            background-color: rgb(249,249,249);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;       
+        }   
+        .register{
+            width: 46px;
+            height: 31px;
+            border-radius: 5px;
+
+            background-color: yellow;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .personal{
+            width: 20px;
+            height: 20px;
+
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/99/Sample_User_Icon.png);
+            background-position: center;
+            background-size: cover;
+
+            margin-right: 10px;
+        }
+
+            .recommend-channel{
+                width: 50px;
+                height: calc(100vh - 50px);
+                background-color: rgb(208, 212, 216);
+                padding: 10px 0 0 0 ;
+
+                position: fixed;
+                top: 50px;
+                left: 0px;
+            }
+
+            .channel{
+               width: 30px;
+               height: 30px;
+               border-radius: 50%;
+               background-color: royalblue;
+               margin: 0px auto 10px;
+
+
+            }
+
+            main{
+                padding:0px 30px;
+                height: 2000px;
+            }
+
+            .container{
+                width: 100%;
+                padding-top: 30px;
+            }
+            h1{
+                width: 100%;
+                font-size: 54px;
+                margin: 0px;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+            h3{
+                width: 100%;
+                font-size: 24px;
+                margin-top: 0px;
+                margin-bottom: 45px;
+                font-weight: bold;
+                color: gray;
+            }
+            .gamemenu{
+                width: 100%;
+                height: 155px;
+                background-color: violet;
+                margin-bottom: 25px;
+            }
+
+            h2{
+                font-size: 36px;
+                width: 100%;
+                margin: 0px;
+                font-weight: bold;
+            }
+            .subtitle{
+                width: 100%;
+                margin-bottom: 20px;
+                font-size: 18px;
+                color: gray;
+            }
+            .videos{
+                width: 100%;
+                height: 500px;
+                background-color: violet;           
+             }
+    
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="top">
+            <div class="discover">
+                 <div class="logo"></div>
+                 <div class="browse">瀏覽</div>
+                 <div class="more"></div>
+            </div>
+            <div class="search">
+                 <input type="text" class="input" placeholder="搜尋">
+                 <div class="search-btn"></div>
+            </div>
+            <div class="option">
+                 <div class="notification"></div>
+                 <div class="login">登入</div>
+                 <div class="register">註冊</div>
+                 <div class="personal"></div>
+            </div>
+        </div>
+            <div class="recommend-channel">
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+                  <div class="channel"></div>
+           </div>
+    </nav>
+    <main>
+        <div class="game">
+            <div class="container">
+                <h1>電競</h1>
+                <h3>即時賽況、賽事精華和您最愛的職業玩家都在這裡</h3>
+                    <div class="gamemenu">
+                        <div class="cover"></div>
+                        <div class="covertext">
+                            <div class="title"></div>
+                            <div class="condition"></div>
+                            <div class="live-icon"></div>
+                        </div>
+                    </div>
+                <h2>實況中的對戰</h2>
+                <div class="subtitle">我們認為您會喜歡的最精彩 Live 比賽和對戰</div>
+                <div class="videos"></div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

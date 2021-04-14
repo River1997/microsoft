@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin="0px"}
+         *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0px;
+        }
+        ul{
+            padding: 0px;
+        }
+        nav{
+            width: 100%;
+            height: 55px;
+            background-color: orangered;
+        }
+        main{
+            width: 100%;
+        }
+        .left{
+            float: left;
+            list-style-type:none;
+        }
+        .left li{
+            float: left;
+            margin-right: 30px;
+        }
+        .left li img{
+            width: 108px;
+        }
+        .right{
+            float: right;
+            list-style-type:none;
+            margin: 10px 0px;
+ 
+        }
+
+        .right li{
+            float: left;
+        }
+        .right li img{
+            width: 23px;
+            height: 23px;
+            float: left;
+            position: relative;
+            top: 6px;
+        }
+        .right li div{
+            height: 23px;
+            line-height: 23px;
+            float: left;
+            position: relative;
+            top: 6px;
+        }
+
+        .right .all-microsoft{
+            margin-right: 35px;
+        }
+
+        .right .search{
+            margin-right: 45px;
+        }
+
+        .right .shopping-cart{
+            margin-right: 15px;
+        }
+        
+        .right .login div{
+            height: 35px;
+        }
+        .right .login img{
+            width: 35px;
+            height: 35px;
+            position: static;
+        }
+        .container{
+            width: 1367.3px;
+            margin: auto;
+        }
+
+        .cover{
+            width: 100%;
+            height: 511.3px;
+            background-color: gray;
+            padding: 0 80.5px 0 80.5px;
+            position: relative;
+        }
+
+        .covertext-1{
+            font-size: 30px;
+            text-align:left;
+            position: absolute;
+            top: 200px;
+        }
+
+        .covertext-2{
+            text-align:left;
+            position: absolute;
+            top: 250px;
+        }
+
+        .covertext-3{
+            text-align:left;
+            position: absolute;
+            top: 280px;
+            color: white;
+            background-color: black;
+            padding: 8px 20px;
+        }
+
+        .select{
+            list-style-type: none;
+            height: 217px;
+            padding: 92px 0px 5px 450px ;
+
+
+        }
+
+        .select-space {
+            width: 184px;
+            height: 114px;
+            position: relative;
+            float: left;
+            margin-right: 70px;
+
+        }
+
+        .select-space .select-2 img{
+            padding: 5px 35px;
+        }
+
+        .select-space .select-1 img{
+            padding: 0 67px;
+        }
+
+        .select-space .select-3 img{
+            padding: 0 30px;
+        }
+
+        .select-space h4{
+            margin: 3px;
+            text-align:center
+        }
+        
+
+        .picture{
+            height: 484px;
+
+        }
+
+        .picture-space{
+            height: 100%;
+            width: 320px;
+            margin-right: 28px;
+            float: left;
+            background-color:rgb(231, 112, 112);
+
+        }
+
+        .picture-space-last{
+            height: 100%;
+            width: 315px;
+            float: left;
+            background-color:rgb(241, 105, 105);
+
+        }
+
+        .picture-text{
+            font-size: 11px;
+            padding: 10px 10px 0 0;
+        }
+
+        .picture-text h3{
+           font-size: 15px;
+           color: blue;
+        }
+
+        .picture img{
+            width: 320px;
+        }
+
+        .last-list-space{
+            width: 226.96px;
+            height: 324px;
+            list-style-type: none;
+            float: left;
+            line-height: 32px;
+            padding: 30px 0;
+            font-size: 15px;
+        }
+
+        .lastbar-l{
+            height: 72px;
+            width: 100%;
+
+            clear: both;
+            font-size: 15px;
+            list-style-type: none;
+            float: left;
+
+        }
+
+        .lastbar-r{
+            padding-bottom: 20px;
+        }
+
+        .lastbar-r li{
+            float: right;
+            margin-right: 15px;
+            padding: 0 0 20px 0;
+            line-height: 20px;
+            
+        }
+
+        footer{
+            height: 396px;
+            
+            background-color: rgb(201, 196, 196);
+
+           
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul class="left">
+                <li><img src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31" alt=""></li>
+                <li>Microsoft 365</li>
+                <li>Office</li>
+                <li>Windows</li>
+                <li>Surface</li>
+                <li>Xbox</li>
+                <li>支援</li>
+            </ul>
+    
+            <ul class="right">
+                <li class="all-microsoft">
+                    <div>所有microsoft</div>
+                    <img src="./img/下拉式箭頭.jpg.png" alt=""> 
+                </li>
+                <li class="search">
+                    <div>搜尋</div>
+                    <img src="./img/放大鏡.png" alt=""> 
+                </li>
+                <li class="shopping-cart">
+                    <div>購物車</div>
+                    <img src="./img/購物車.png" alt=""> 
+                </li>
+                <li class="login">
+                    <div>登入</div>
+                    <img src="./img/登入.png" alt=""> 
+                </li>
+            </ul>
+
+
+
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="cover">
+                <div class="covertext"></div>
+                <div class="covertext-1">Surface Laptop</div>
+                <div class="covertext-2">每天使用完美筆記型電腦 速度比以往更快</div>
+                <div class="covertext-3">
+                 <span>立即選購</span>
+                </div>
+            </div>
+
+        <div class="select">
+                    <div class="select-space">
+                        <li class="select-1">
+                        <img src="./img/window視窗.png" alt="" >
+                        <div class="select-1" text-align:center>
+                        <h4>選擇您的</h4>
+                        <h4>Microsoft 365</h4>
+                        </div>
+                        </li>
+                    </div>
+                    <div class="select-space">
+                        <li class="select-2">
+                            <img src="./img/Surface.png" alt="">
+                            <div class="select-2">選購Surface裝置</div>
+                        </li>
+                        
+                    </div>
+                    <div class="select-space">
+                        <li class="select-3">
+                        <img src="./img/window10.png" alt="">
+                        <div class="select-3">選購Windows 10</div>
+                        </li>
+                    </div>
+
+            </div>
+        
+        <div class="picture">  
+            <div class="picture-space">
+            <img src="./img/picture-1.png" alt="">
+            <div class="picture-text"><h1>Surface Laptop Go</h1>
+                <h2>運用時尚和效能兼具、最輕巧的Surface筆記型電腦，善加利用每一天</h2>
+                <h3>立即選購</h3>
+                </div>
+            </div>
+            <div class="picture-space">
+                <img src="./img/picture-2.png" alt="">
+                <div class="picture-text"><h1>Microsoft 365</h1>
+                    <h2>進階版office應用程式、
+                        額外的雲端儲存空間、進階安全性等功能，全都在一個方面的訂閱中。
+                    </h2>
+                    <h3>最多可供6人使用 適合1人使用＞</h3>
+                    </div></div>
+            <div class="picture-space">
+                <div class="picture-space">
+                    <img src="./img/picture-3.png" alt="">
+                    <div class="picture-text">
+                        <h1>Xbox Game Pass Ultimate</h1>
+                        <h2>Xbox Live Gold 和超過100款高品質的主機遊戲和電腦遊戲。與好友同樂，並探索下一個最愛遊戲。
+                        </h2>
+                        <h3>立即加入＞</h3>
+                    </div></div>
+            </div>
+           
+            <div class="picture-space-last">
+                <div class="picture-space-last">
+                    <img src="./img/picture-4.png" alt="">
+                    <div class="picture-text"><h1>Microsoft Edge</h1>
+                        <h2>在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值
+                        </h2>
+                        <h3>立即下載</h3>
+                        </div>
+            </div>
+        </div>  
+
+        </div>
+         <div class="cover">
+            <div class="covertext"></div>
+            <div class="covertext-1">Microsoft OneDrive</div>
+            <div class="covertext-2">將檔案和相片儲存到 OneDrive，即可隨時隨地從任何裝置存取</div>
+            <div class="covertext-3">
+             <span>深入了解</span>
+            </div>
+        </div>
+
+        <div class="picture">  
+            <div class="picture-space">
+            <img src="./img/picture-5.png" alt="">
+            <div class="picture-text"><h1>適用於商務的Surface</h1>
+                <h2>無論從事哪種工作，都有一款有助於成功的Surface</h2>
+                <h3>立即選購＞</h3>
+                </div>
+            </div>
+            <div class="picture-space">
+                <img src="./img/picture-6.png" alt="">
+                <div class="picture-text"><h1>Microsoft 365 商業版</h1>
+                    <h2>透過功能強大的應用程式提高生產力、聯繫和安全，始始終領先一步
+                    </h2>
+                    <h3>最多可供6人使用＞ 適合1人使用＞</h3>
+                    </div></div>
+            <div class="picture-space">
+                <div class="picture-space">
+                    <img src="./img/picture-3.png" alt="">
+                    <div class="picture-text">
+                        <h1>Xbox Game Pass Ultimate</h1>
+                        <h2>Xbox Live Gold 和超過100款高品質的主機遊戲和電腦遊戲。與好友同樂，並探索下一個最愛遊戲。
+                        </h2>
+                        <h3>立即加入＞</h3>
+                        </div>
+            </div>
+            </div>
+            <div class="picture-space-last">
+                <div class="picture-space">
+                    <img src="./img/picture-8.png" alt="">
+                    <div class="picture-text"><h1>Microsoft Edge</h1>
+                        <h2>在您瀏覽時提供世界級的效能，以及更多的隱私、更充足的生產力與更高的價值
+                        </h2>
+                        <h3>立即下載＞</h3>
+                        </div>
+
+       
+
+    </main>
+    <footer>
+        <div class="container">
+            <ul class="last-list-space">
+                <li>最新動向</li>
+                <li>Microsoft 365</li>
+                <li>Surface Go</li>
+                <li>Surface Book 2</li>
+                <li>Surface Pro</li>
+                <li>Windows 10應用程式</li>
+            </ul>
+        </div>
+        <div class="container">
+            <ul class="last-list-space">
+                <li>Microsoft Store</li>
+                <li>帳戶設定檔</li>
+                <li>下載中心</li>
+                <li>Microsoft Store支援</li>
+                <li>退貨/退款</li>
+                <li>訂單追蹤</li>
+            </ul>
+        </div>
+        <div class="container">
+            <ul class="last-list-space">
+                <li>教育</li>
+                <li>Microsoft在教育領域的應用</li>
+                <li>學生適用的Office</li>
+                <li>學校適用的Office365</li>
+                <li>Microsoft Azure在教育領域的應用</li>
+            </ul>
+        </div><div class="container">
+            <ul class="last-list-space">
+                <li>企業</li>
+                <li>Azure</li>
+                <li>AppSourse</li>
+                <li>汽車</li>
+                <li>政府機構</li>
+                <li>醫療保健</li>
+                <li>製造</li>
+                <li>金融服務</li>
+                <li>零售</li>
+            </ul>
+        </div><div class="container">
+            <ul class="last-list-space">
+                <li>開發人員</li>
+                <li>Micrisoft Visual Stadio</li>
+                <li>Windows開發人員中心</li>
+                <li>開發人員中心</li>
+                <li>Micrisoft開發人員計畫</li>
+                <li>Channel9</li>
+            </ul>
+        </div>
+        </div><div class="container">
+            <ul class="last-list-space">
+                <li>公司</li>
+                <li>人才招募</li>
+                <li>公司新聞</li>
+                <li>Microsoft隱私權</li>
+                <li>投資者</li>
+                <li>安全性</li>
+            </ul>
+        </div>
+        <div class="container">
+        <div ul class="lastbar-l">
+            <span>中文(台灣)</span>
+            </ul>
+        <div ul class="lastbar-r">
+            <li>聯絡Microsoft</li>
+            <li>隱私權</li>
+            <li>使用規定</li>
+            <li>商標</li>
+            <li>有關我們的廣告訊息</li>
+            <li>Microsoft2021</li>
+        </ul>
+        </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

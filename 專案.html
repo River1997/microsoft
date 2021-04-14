@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{margin: 0px;}
+        *{box-sizing: border-box;}
+
+        nav{
+            width: 100%;
+            height: 100vh;
+        }
+
+        .navbar{
+            width: 100%;
+            height: 50px;
+            background-color: brown;
+            position: fixed;
+            float: left;
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .container{
+            width: 70%;
+            margin: auto;
+          
+        }
+
+        .cover{
+            width: 100%;
+            height: calc(100vh - 50px);
+            background-image: url(https://storage.googleapis.com/afs-prod/media/media:275ef2caa7204402aa9561bf44b4e7d8/3000.jpeg);
+            background-image: cover;
+            background-size: 100%;
+            padding: 5px 0 ;
+        }
+
+        .cover h1{
+            font-size: 140px;
+            color: white;
+            line-height:20px;
+
+        }
+
+        .cover h1 span{
+            font-size: 57px;
+            color: white;
+            background-color: black;
+
+
+            
+        }
+
+        .linkbar{
+            width: 100%;
+            height: 50px;
+            background-color: brown;
+        }
+
+        .linkbar .container{
+            display: flex;
+            justify-content: space-between;
+            font-size: 30px;
+        }
+
+        .page-2-b{
+            width: 100%;
+            height: 100vh;
+        }
+
+        .page-2-b .container{
+            padding: 200px 0;
+        }
+
+        .page-2-b img{
+            width: 50%;
+            height: 30%;
+            float: left;
+        }
+
+        .page-2-b-text{
+            float: right;
+            line-height: 20px;
+        }
+
+        .page-2-b-text h1{
+            text-align: center;
+        }
+
+        .page-3-a-left,.page-3-a-right{
+            width: 50%;
+            height: 100vh;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Ohtani_batting_2019.08.04%283%29.jpg/1200px-Ohtani_batting_2019.08.04%283%29.jpg);
+            background-size: cover;
+            float: left;
+            color: white;
+            padding: 250px 150px;
+
+        }
+
+        .page-3-a-right{
+            background-image: url(https://imgcdn.cna.com.tw/www/WebPhotos/1024/20200727/1639x2473_947715961714.jpg);
+        }
+
+        .page-3-a-left:hover{
+            background-image: url(http://img.ltn.com.tw/Upload/sports/page/800/2018/09/11/phpuGT4sR.jpg);           
+
+        }
+
+        .page-3-a-right:hover{
+            background-image: url(https://s.yimg.com/ny/api/res/1.2/iaCYei5l38dTJf4okRky3A--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyNDI7aD0xODYz/https://s.yimg.com/uu/api/res/1.2/nd.Y5LDqBZ5b8KXvy9wijw--~B/aD0xODAwO3c9MTIwMDtzbT0xO2FwcGlkPXl0YWNoeW9u/http://media.zenfs.com/zh-Hant-TW/homerun/mirrormedia.mg/799662af3e344358a18c03fe0305ed0e);
+        }
+
+        .page-4-c{
+            width: 100%;
+            height: 100vh;
+            background-image: url(https://s.yimg.com/ny/api/res/1.2/c9.XjlfOIkLgAkKtp_qVaA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzMz/https://s.yimg.com/os/creatr-uploaded-images/2021-04/07ce4390-9443-11eb-9dd9-2b857d7babe4);
+            clear: both;
+            padding: 250px;
+            text-align:center;
+
+        }
+
+        .page-5-d{
+            width: 100%;
+            height: 100vh;
+            background-image: url(./img/ohatni-08.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .footerbar{
+            width: 100%;
+            height: 50px;
+            background-color: brown;
+            padding: 5px 0;
+            text-align:center;
+            font-size: 20px;
+
+        }
+
+        @media(max-width:576px){
+
+            
+
+            .cover{
+                background-size:220% ;
+                background-repeat: repeat-x;
+                height: (100vh - 50px);
+                padding: 180px 0 ;
+
+                background-position:center;
+            }
+
+            .cover h1{
+                font-size: 80px;
+                color: black;
+            }
+
+            .cover h1 span{
+            font-size: 37px;
+            }
+
+            .page-2-b .container{
+                width: unset;
+                padding: 0;
+            }
+
+            .page-2-b img{
+                width: 100%;
+                height: 30%;
+                float: left;
+            }
+
+            .page-2-b h1,.page-2-b h2{
+                line-height: 45px;
+
+            }
+
+            .page-3-a-left,.page-3-a-right{
+                width: 100%;
+            }
+            .page-4-c{
+                background-image:none;
+                padding: 50px 30px;
+                height: 50vh;
+                text-align: left;
+                background-position:center
+
+            }
+
+            .page-4-c h1{
+                text-align: center;
+                line-height:2px;
+            }
+
+
+            .page-4-c-phone{
+                height: 50vh;
+                width: 100%;
+
+                background-image: url(https://s.yimg.com/ny/api/res/1.2/c9.XjlfOIkLgAkKtp_qVaA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTIwMDA7aD0xMzMz/https://s.yimg.com/os/creatr-uploaded-images/2021-04/07ce4390-9443-11eb-9dd9-2b857d7babe4);
+ 
+                background-size: 130%;
+                background-repeat: no-repeat;
+
+            }
+
+            .page-5-d{
+                background-position:center;
+                background-size: 250%;
+                background-repeat: no-repeat;
+
+            }
+        }
+
+        #page-2{
+            width: 100%;
+            z-index: -1;
+        }
+
+        #page-3{
+            width: 100%;
+            z-index: -1;
+        }
+
+        #page-4{
+            width: 100%;
+            height: unset;
+            z-index: -1;
+            clear: both;
+        }
+
+        #page-5{
+            width: 100%;
+            z-index: -1;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="container">大谷翔平簡介</div>
+        </div>
+        <div class="cover">
+            <div class="container">
+                <div class="covertext">
+                    <h1>大</h1>
+                    <h1>谷</h1>
+                    <h1>翔</h1>
+                    <h1>平 <span style="color:white; background-color: black;">世界的二刀流</span></h1>
+                </div>
+            </div>
+        </div>
+        <div class="linkbar">
+            <div class="container">
+                <div class="link"><a href="#page-2">page-1</a></div>
+                <div class="link"><a href="#page-3">page-2</a></div>
+                <div class="link"><a href="#page-4">page-3</a></div>
+                <div class="link"><a href="#page-5">page-4</a></div>
+            </div>
+        </div>
+
+    </nav>
+    <main>
+        <div id="page-2"></div>
+        <div class="page-2-b"> 
+            <div class="container">
+                <img src="https://img.technews.tw/wp-content/uploads/2018/04/11152814/RTX4YI9U-e1523431714364.jpg" alt="">
+                <div class="page-2-b-text">
+                    <h1>天才棒球員</h1>
+                    <h2>大谷翔平是日本岩手縣奧州市出身的職業棒球選手，</h2>
+                    <h2>守備位置是投手和外野手，</h2>
+                    <h2>2013年獲得北海道火腿隊第一指名，</h2>
+                    <h2>以投打雙刀流替球隊做出貢獻，</h2>
+                    <h2>並於2018年前往大聯盟洛杉磯天使隊，</h2>
+                    <h2>同時擔任指定打擊和投手是美國職棒百年來第一人</h2>
+                </div>
+            </div>
+        </div>
+        <div id="page-3"></div>
+        <div class="page-3-a">
+            <div class="page-3-a-left">
+                <h2>打擊區裡的大谷，</h2>
+                <h2>是能造成重傷害的重砲手，</h2>
+                <h2>截至2021/4/11，已經敲出50發全壘打，</h2>
+                <h2>是日本選手在美國職棒最快達成的，</h2>
+                <h2>生涯OPS+高達125</h2>
+            </div>
+            <div class="page-3-a-right">
+                <h2>投手丘上的大谷，</h2>
+                <h2>締造日本最速165公里的時速，</h2>
+                <h2>亦有高品質的指叉球、滑球、曲球，</h2>
+                <h2>首個完整美職球季ERA+高達124，</h2>
+                <h2>生涯k/9值11.3，堪稱三振高手</h2>
+            </div>
+        </div>
+        <div id="page-4"></div>
+        <div class="page-4-c">
+            <h1>無所不能</h1>
+            <h2>不只是投球和打擊，大谷的跑速高達29m/s，遠高於平均27m/s，</h2>
+            <h2>在分工越趨嚴謹的大聯盟裡面，</h2>
+            <h2>擁有頂級球速、跑速、打擊力量的大谷，</h2>
+            <h2>相當於神話級的存在，恐怕唯有傷痛才能夠阻止他持續創造歷史</h2>
+
+        </div>
+        <div class="page-4-c-phone"></div>
+        <div id="page-5"></div>
+        <div class="page-5-d"></div>
+    </main>
+    <footer>
+        <div class="footerbar">--作者．江季軒--圖片取自網路--</div>
+    </footer>
+    
+</body>
+</html>
