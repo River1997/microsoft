@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                        <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="viewport" content="width=, initial-scale=1.0">
+                        <title>Document</title>
+
+    <style>
+        .box1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+        }
+
+        .clicked{                
+                width: 200px;
+                height: 150px;
+                background-color:blue;
+        }
+
+        .box2{
+                width: 200px;
+                height: 500px;
+                background-color: blueviolet;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+        <div class="box1">紅色的箱子</div>
+        <div class="box2">黑色的箱子</div>
+
+        <script>
+            var box1 = document.querySelector('.box1')
+
+            var box2 = document.querySelector('.box2')
+
+            box1.onclick = function(){
+                console.log('箱子被按到');
+                box1.classList.add('clicked')
+            }
+
+            box2.onclick = function(){
+                console.log('箱子被按到');
+                box1.classList.remove('clicked')
+            }
+//             console.log('hello world!!');
+//             console.log(256151)
+
+//             console.log(document.querySelector('.box1'));
+
+//             document.querySelector('.box2')
+//             console.log('hello world??');
+//             console.log(777777)
+
+//             console.log(document.querySelector('.box2'));
+
+
+
+
+        </script>
+</body>
+</html>

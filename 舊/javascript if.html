@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                        <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="viewport" content="width=, initial-scale=1.0">
+                        <title>Document</title>
+
+    <style>
+        .box1{
+                width: 100px;
+                height: 100px;
+                background-color: red;
+        }
+
+        .clicked{                
+                width: 200px;
+                height: 150px;
+                background-color:blue;
+        }
+
+        .box2{
+                width: 200px;
+                height: 500px;
+                background-color: blueviolet;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+        <div class="box1">紅色的箱子</div>
+        <div class="box2">黑色的箱子</div>
+
+        <script>
+
+
+                //將class標籤用變數『a』『b』『c』表示
+            var a = document.querySelector('.box1')
+
+            var b = document.querySelector('.box2')
+
+            var c = document.querySelector('.clicked')
+
+
+
+                // 指定變數「a」綁定事件『onclick』
+            a.onclick=function () {
+                    
+                //假設變數「a」在事件『onclick』時，移除標籤classList裡的變數「C」，反之，則增添變數「C」
+                if (a.classList.contains('clicked')) {
+                        a.classList.remove('clicked')
+                    
+                } else {
+                        a.classList.add('clicked')
+                    
+                }
+            }
+
+            
+        //     a.onclick = function(){
+        //         console.log('箱子被按到');
+         
+        //     }
+
+        //     b.onclick = function(){
+        //         console.log('箱子被按到');
+        
+        //     }
+
+
+
+
+
+
+
+        </script>
+</body>
+</html>
