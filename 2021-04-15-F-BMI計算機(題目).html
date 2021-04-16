@@ -163,38 +163,47 @@
         
         start_btn.onclick = function(){
             
-            resultCanvas.classList.add('active')
+            if(height.value=='' || weight.value=='' || isNaN(height.value) || isNaN(weight.value)){
+                window.alert('請輸入數字');
+            }
+            else{
 
-            var BMI =weight.value/((height.value/100) ** 2)
-            
-            result_BMI.innerHTML= BMI.toFixed(1)
+                resultCanvas.classList.add('active')
+                
+                var BMI =weight.value/((height.value/100) ** 2)
 
-            if(BMI >= 27){
+                result_BMI.innerHTML= BMI.toFixed(1)
+                }
+                if(BMI >= 27){
                 result_bodyStatus.innerHTML='肥胖'
                 result_suggest.innerHTML='請運動，立刻'
-            }
-            else if(BMI >= 24){
-                result_bodyStatus.innerHTML='過胖'
-                result_suggest.innerHTML='該運動了'
+                }
+                else if(BMI >= 24){
+                    result_bodyStatus.innerHTML='過胖'
+                    result_suggest.innerHTML='該運動了'
+
+                }
+                else if(BMI >= 18.5){
+                    result_bodyStatus.innerHTML='正常'
+                    result_suggest.innerHTML='幹得好'
+
+                }
+
+                else if(BMI == 'NaN'){
+                    result_bodyStatus.innerHTML='請重新輸入'
+                    result_suggest.innerHTML='請重新輸入'
+
+                }
+
+                else{
+                    result_bodyStatus.innerHTML='太瘦'
+                    result_suggest.innerHTML='搞不好不用當兵'            
+                }
 
             }
-            else if(BMI >= 18.5){
-                result_bodyStatus.innerHTML='正常'
-                result_suggest.innerHTML='幹得好'
 
-            }
 
-            else if(BMI == 'NaN'){
-                result_bodyStatus.innerHTML='請重新輸入'
-                result_suggest.innerHTML='請重新輸入'
-
-            }
-
-            else{
-                result_bodyStatus.innerHTML='太瘦'
-                result_suggest.innerHTML='搞不好不用當兵'            
-            }
-        }
+        
 
 
    
