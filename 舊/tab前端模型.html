@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+                        <meta charset="UTF-8">
+                        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Document</title>
+
+                        <style>
+
+                            body{margin: 0px;}
+                            *{box-sizing: border-box;}
+
+                            .tab-area{
+                                        width:80%;
+                                        height: 300px;
+                                        background-color: rgb(106, 106, 170);
+                                        padding: 20px;
+                            }
+                            .tab-btn-group{
+                                        width: 100%;
+                                        height: 100px;
+                                        background-color: burlywood;
+                                        display: flex;
+                                        justify-content: space-between;
+                            }
+                            .tab-btn{
+                                        width: 50px;
+                                        height: 100px;
+                                        background-color: chocolate;
+                            }                                   
+
+
+                            .tab-btn.active {
+                                transition: .1s;
+                                background-color: red;
+                            }
+
+                            .tab-btn:hover {
+                                background-color: rgb(26, 26, 24);
+                                color: white;
+                            }
+
+                            .tab-cotent{
+                                        background-color: darkgreen;
+                                        display: none;
+                                        
+                            }
+
+                            .tab-content.active{
+                                display: block                   
+                            }                                   
+                        </style>
+</head>
+<body>
+    <div class="tab-area">          
+        <div class="tab-btn-group">          
+            <div class="tab-btn" id="btn-1">按鈕1</div>          
+            <div class="tab-btn" id="btn-2">按鈕2</div>          
+            <div class="tab-btn" id="btn-3">按鈕3</div>
+        </div>          
+        <div class="tab-content-group">          
+            <div class="tab-cotent" id="content-1">內容1</div>          
+            <div class="tab-cotent" id="content-2">內容2</div>          
+            <div class="tab-cotent" id="content-3">內容3</div>
+        </div> 
+    </div> 
+               
+    <script>
+        var btn_1 = document.querySelector("#btn-1")
+        var btn_2 = document.querySelector("#btn-2")
+        var btn_3 = document.querySelector("#btn-3")
+
+        var content_1 = document.querySelector("#content-1")       
+        var content_2 = document.querySelector("#content-2")       
+        var content_3 = document.querySelector("#content-3")
+        
+        btn_1.onclick = function(){
+             clearAllActive()                                
+             btn_1.classList.add('active')
+             content_1.classList.add('active')                    
+        }
+        btn_2.onclick = function(){
+             clearAllActive()
+             btn_2.classList.add('active')
+             content_2.classList.add('active')                    
+        }
+
+        btn_3.onclick = function(){
+             clearAllActive()
+             btn_3.classList.add('active')
+             content_3.classList.add('active')                    
+        }
+
+        function clearAllActive() {
+             btn_1.classList.remove('active')
+             content_1.classList.remove('active')   
+             btn_2.classList.remove('active')
+             content_2.classList.remove('active')   
+             btn_3.classList.remove('active')
+             content_3.classList.remove('active')   
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

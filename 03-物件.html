@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .card-group {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-start;
+        }
+
+        .card {
+            width: 400px;
+            height: 600px;
+            background-color: wheat;
+            margin: 0 0 80px 0;
+        }
+
+        .photo {
+            width: 100%;
+            height: 70%;
+            background-color: red;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            width: 100%;
+            height: 30%;
+            padding: 10px 0;
+            background-color: violet;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card-group"></div>
+
+    <script>
+
+        //宣告變數綁定標籤
+        var card_group = document.querySelector('.card-group')
+        
+        //宣告變數為陣列，包含各元素
+        var drinks = [
+            {
+                img: "https://www.gomaji.com/blog/wp-content/uploads/2020/01/TaiChung-Handmade-Drink-Banner-e1578283053601.jpg",
+                name: "幾杯",
+                price: "999999999",
+                content: "一些色素"
+
+            },{
+                img: "https://www.gomaji.com/blog/wp-content/uploads/2020/01/TaiChung-Handmade-Drink-Banner-e1578283053601.jpg",
+                name: "好幾杯",
+                price: "999999999",
+                content: "一些色素"
+
+            },{
+                img: "https://www.gomaji.com/blog/wp-content/uploads/2020/01/TaiChung-Handmade-Drink-Banner-e1578283053601.jpg",
+                name: "超多杯",
+                price: "999999999",
+                content: "一些色素"
+
+            },{
+                img: "https://www.gomaji.com/blog/wp-content/uploads/2020/01/TaiChung-Handmade-Drink-Banner-e1578283053601.jpg",
+                name: "超多杯",
+                price: "999999999",
+                content: "一些色素"
+
+            }
+        ]
+
+        //執行迴圈，印出樣板字串，樣板字串依照陣列輸入的內容顯示，並用$定義
+        // for (let index = 0; index < drinks.length; index++) {
+        //     card_group.innerHTML += `
+        //     <div class="card">
+        //         <div class="photo">
+        //             <img src="${drinks[index].img}" alt="">
+        //         </div>
+        //         <div class="content">
+        //             <p>品項:${drinks[index].name}</p>
+        //             <p>價格:${drinks[index].price}</p>
+        //             <p>內容:${drinks[index].content}</p>
+        //         </div>
+        //     </div>`
+        // }
+
+        drinks.forEach(element => {
+            card_group.innerHTML += `
+            <div class="card">
+                <div class="photo">
+                    <img src="${element.img}" alt="">
+                </div>
+                <div class="content">
+                    <p>品項:${element.name}</p>
+                    <p>價格:${element.price}</p>
+                    <p>內容:${element.content}</p>
+                </div>
+            </div>`
+            
+            
+        });
+
+
+
+    </script>
+</body>
+
+</html>
