@@ -115,14 +115,32 @@
         }
 
         nav .container .menu{
-            width: 80%;
+            width: 1200px;
             height: 396px;
-            background-color: gray;
+            background-color: rgb(194, 194, 194);
             z-index: 1;
             position: absolute;
             top: 50px;
-            left: 550px;
+            right: 250px;
+            display:none;
+            padding: 15px;
+        }
+
+        .menu-card-small{
             display: none;
+        }
+
+
+        .menu-card ul{
+            text-align:left;
+            margin-left: 15px;
+            font-size: 12px;
+
+        }
+        .menu-card li{
+            list-style: none;
+            font-size: 12px;
+            margin: 20px 0 0 55px ;
         }
 
         #menu-hidden:checked + .menu{
@@ -202,39 +220,56 @@
         main .container .cover{
             position: relative;
             width: 100%;
-            height: 600px;
-        }
-
-
-        main .container .cover:hover{
-            display: block;
+            /* height: 600px; */
             z-index: 1;
         }
 
+
+        /* main .container .cover:hover{
+            display: block;
+            z-index: 1;
+        } */
+
         main .container .cover .icons-left{
+            height: 100%;
+            width: 50%;
             position: absolute;
             left: 0px;
-            top: 250px;
-            display: none;
+            top: 10px;
         }
 
         main .container .cover .icons-right{
+            height: 100%;
+            width: 50%;
             position: absolute;
             right: 0px;
-            top:250px;
+            top:10px;
 
         }
 
-        main .container .cover .icons-left img:hover{
-            filter: url(100);
+        /* main .container .cover .icons-left:hover{
+            background-image: url(./img/箭頭往左.png);
+            background-repeat: no-repeat;
+            background-position:left
+        }
 
+        main .container .cover .icons-right:hover{
+            background-image: url(./img/箭頭往右.png);
+            background-repeat: no-repeat;
+            background-position:right
+        } */
+
+        main .container .cover:hover + main .container .cover .icons-left{
+            background-image: url(./img/箭頭往左.png);
+            background-repeat: no-repeat;
+            background-position:left
         }
 
 
 
         main .container .cover img{
             width: 100%;
-            height: 100%;
+            height: auto;
 
         }
 
@@ -280,6 +315,7 @@
         main .container .picture{
            position: absolute;
            width: 100%;   
+           height: auto;
         }
 
 
@@ -287,7 +323,7 @@
         main .container .shopmarks{
             width: 100%;
             height: 200px;
-            background-color: aqua;
+            /* background-color: aqua; */
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -320,7 +356,7 @@
         }
 
         main .container .fiction-cards{
-            background-color: violet;
+            /* background-color: violet; */
             width: 100%;
             height: 400px;
             display: flex;
@@ -331,14 +367,14 @@
             width: calc(25% - 11.25px);
             display: flex;
             flex-direction:column;
-            background-color: tomato;
+            /* background-color: tomato; */
 
 
         }
 
         .fiction-card img{
              width: 100%;
-             height: 50%;
+             height: auto;
              margin-bottom: 37px;
          }
 
@@ -551,7 +587,7 @@
 
             main .container .fiction-card{
                 width:480px;
-                height: 420px;
+                height:auto;
                 display: flex;
                 flex-direction:column;
                 flex-wrap:wrap;
@@ -559,7 +595,7 @@
 
             .fiction-card img{
                 width: 100%;
-                height: 60%;
+                height: auto;
                 margin-bottom: 37px;
             }
 
@@ -629,7 +665,8 @@
 
 
             label{
-                right: 650px;
+                left: 0px;
+                top: 17px;
             }
 
             label span{
@@ -638,22 +675,61 @@
             }
 
             label h7{
-            display: block;
-            height: 16px;
-            width: 16px;
+                display: block;
+                height: 16px;
+                width: 16px;
+                font-size: 20px;
             }
 
             label img{
-            display: none;
+                display: none;
             }
 
             nav .container .menu{
-            width: 100%;
-            height: 100vh;
-            background-color: gray;
-            top: 55px;
-            left: 0px;
+                width: 100%;
+                height: 80vh;
+                background-color: rgb(175, 175, 175);
+                top: 55px;
+                left: 0px;
             }
+
+            nav .container .menu ul,nav .container .menu li{
+                display: none;
+            }
+
+            nav .options {
+                display: block;
+                width: 100%;
+            }           
+
+            nav .container .options .option .search{
+                position: absolute;
+                left: 25px;
+            }
+
+            nav .container .options .option .shop{
+                position: absolute;
+                top: 20px;
+                right: 55px;
+            }
+
+            nav .container .options .option .user{
+                position: absolute;
+                top: 15px;
+                right: 15px;
+
+            }
+
+
+
+            .menu-card-small{
+                display: block;]
+ 
+            }
+            .menu-card-small div{
+                margin: 0 0 15px;
+            }
+
 
         }
 
@@ -676,7 +752,7 @@
 
             .fiction-card img{
                 width: 100%;
-                height: 50%;
+                height: auto;
             }
 
 
@@ -727,7 +803,7 @@
             main .container .fiction-cards{
                 margin: auto;
                 width: 100%;
-                height: 1280px;
+                height: 1880px;
                 display: flex;
                 justify-content: space-around;
                 flex-wrap:wrap;
@@ -736,16 +812,16 @@
 
             main .container .fiction-card{
                 width:100%;
-                height: 320px;
+                height: auto;
                 display: flex;
                 flex-direction:column;
                 flex-wrap:wrap;
             }
 
-            .fiction-card img{
+            /* .fiction-card img{
                 width: 100%;
                 height: 50%;
-            }
+            } */
 
             footer .container .footer-cards{
                 height: unset;
@@ -803,20 +879,69 @@
 
                 <input type="checkbox" name="" id="menu-hidden">
                 <div class="menu">
-                    <div class="menu-card">
-                        <a href="">軟體</a>
-                        <a href=""> Windows應用程式</a>
-                        <a href="">OneDrive</a>
-                        <a href="">Outlook</a>
-                        <a href="">Sk</a>
-                        <a href=""></a>
-                        <a href=""></a>
+                    <div class="menu-card-small">
+                        <div>Microsoft365</div>
+                        <div>Office</div>
+                        <div>Windows</div>
+                        <div>Surface</div>
+                        <div>Xbox</div>
+                        <div>支援</div>
+                        <div>軟體</div>
+                        <div>個人電腦和設備</div>
+                        <div>娛樂</div>
+                        <div>商務適用</div>
+                        <div>Developer&IT</div>
+                        <div>其他</div>
+                        <div>檢視網路地圖</div>
                     </div>
-                    <div class="menu-card"></div>
-                    <div class="menu-card"></div>
-                    <div class="menu-card"></div>
-                    <div class="menu-card"></div>
-                    <div class="menu-card"></div>
+                    <div class="menu-card">
+                        <ul>軟體</ul>
+                        <li> Windows應用程式</li>
+                        <li>OneDrive</li>
+                        <li>Outlook</li>
+                        <li>Skype</li>
+                        <li>OneNote</li>
+                        <li>Microsoft Teams</li>
+                    </div>
+                    <div class="menu-card">
+                        <ul>個人電腦與設備</ul>
+                        <li> 選購Xbox</li>
+                        <li> 電腦配件</li>
+                    </div>
+                    <div class="menu-card">
+                        <ul>娛樂</ul>
+                        <li> Xbox Game Pass Ultimate</li>
+                        <li>Xbox 與遊戲</li>
+                        <li>電腦遊戲</li>
+                        <li>Windows遊戲</li>
+                    </div>
+                    <div class="menu-card">
+                        <ul>商務適用</ul>
+                        <li>Microsoft Azure</li>
+                        <li>Microsoft Dynemics 365</li>
+                        <li>Microsoft 365</li>
+                        <li>Microsoft Industry</li>
+                        <li>資料平台</li>
+                        <li>Power Platform</li>
+                        <li>選購商務版</li>
+                    </div>
+                    <div class="menu-card">
+                        <ul>Deveioper&IT</ul>
+                        <li>.NET</li>
+                        <li>Visual Studio</li>
+                        <li>Windows Servre</li>
+                        <li>開發Windows應用程式</li>
+                        <li>文件</li>
+                        <li>Power Apps</li>
+                    </div>
+                    <div class="menu-card">
+                        <ul>其他</ul>
+                        <li>Microsoft Rewards</li>
+                        <li>免費下載與安全性</li>
+                        <li>教育</li>
+                        <li>禮品卡</li>
+                        <li>Licensing/li>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -824,10 +949,10 @@
             <div class="container">
                 <div class="cover">
                     <div class="icons-left">
-                        <img src="./img/箭頭往左.png" alt="">
+                        <!-- <img src="./img/箭頭往左.png" alt=""> -->
                     </div>
                     <div class="icons-right">
-                        <img src="./img/箭頭往右.png" alt="">
+                        <!-- <img src="./img/箭頭往右.png" alt=""> -->
                     </div>
                     <div class="text">
                         <h1>Surface Pro7</h1>
