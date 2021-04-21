@@ -118,18 +118,45 @@
             width: 1200px;
             height: 396px;
             background-color: rgb(194, 194, 194);
-            z-index: 1;
+            z-index: 2;
             position: absolute;
             top: 50px;
             right: 250px;
             display:none;
             padding: 15px;
+
         }
 
         .menu-card-small{
             display: none;
         }
 
+        .menuflex{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction:column;
+        }
+
+        .map{
+            background-color: tomato;
+            display: flex;
+            justify-content: center;
+
+        }
+
+
+        .menu-cards{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            flex-direction:row;
+        }
+
+        .menu-card{
+            width: auto;
+
+        }
 
         .menu-card ul{
             text-align:left;
@@ -142,6 +169,9 @@
             font-size: 12px;
             margin: 20px 0 0 55px ;
         }
+
+
+
 
         #menu-hidden:checked + .menu{
             display: flex;
@@ -220,6 +250,7 @@
         main .container .cover{
             position: relative;
             width: 100%;
+            height: auto;
             /* height: 600px; */
             z-index: 1;
         }
@@ -247,7 +278,7 @@
 
         }
 
-        /* main .container .cover .icons-left:hover{
+        main .container .cover .icons-left:hover{
             background-image: url(./img/箭頭往左.png);
             background-repeat: no-repeat;
             background-position:left
@@ -257,13 +288,14 @@
             background-image: url(./img/箭頭往右.png);
             background-repeat: no-repeat;
             background-position:right
-        } */
+        }
 
-        main .container .cover:hover + main .container .cover .icons-left{
+
+        /* main .container .cover:hover + main .container .cover .icons-left{
             background-image: url(./img/箭頭往左.png);
             background-repeat: no-repeat;
             background-position:left
-        }
+        } */
 
 
 
@@ -663,6 +695,10 @@
                 right: calc(50% - 60px);
             }
 
+            .map{
+                display: none;
+            }
+
 
             label{
                 left: 0px;
@@ -729,6 +765,8 @@
             .menu-card-small div{
                 margin: 0 0 15px;
             }
+
+
 
 
         }
@@ -894,53 +932,58 @@
                         <div>其他</div>
                         <div>檢視網路地圖</div>
                     </div>
-                    <div class="menu-card">
-                        <ul>軟體</ul>
-                        <li> Windows應用程式</li>
-                        <li>OneDrive</li>
-                        <li>Outlook</li>
-                        <li>Skype</li>
-                        <li>OneNote</li>
-                        <li>Microsoft Teams</li>
-                    </div>
-                    <div class="menu-card">
-                        <ul>個人電腦與設備</ul>
-                        <li> 選購Xbox</li>
-                        <li> 電腦配件</li>
-                    </div>
-                    <div class="menu-card">
-                        <ul>娛樂</ul>
-                        <li> Xbox Game Pass Ultimate</li>
-                        <li>Xbox 與遊戲</li>
-                        <li>電腦遊戲</li>
-                        <li>Windows遊戲</li>
-                    </div>
-                    <div class="menu-card">
-                        <ul>商務適用</ul>
-                        <li>Microsoft Azure</li>
-                        <li>Microsoft Dynemics 365</li>
-                        <li>Microsoft 365</li>
-                        <li>Microsoft Industry</li>
-                        <li>資料平台</li>
-                        <li>Power Platform</li>
-                        <li>選購商務版</li>
-                    </div>
-                    <div class="menu-card">
-                        <ul>Deveioper&IT</ul>
-                        <li>.NET</li>
-                        <li>Visual Studio</li>
-                        <li>Windows Servre</li>
-                        <li>開發Windows應用程式</li>
-                        <li>文件</li>
-                        <li>Power Apps</li>
-                    </div>
-                    <div class="menu-card">
-                        <ul>其他</ul>
-                        <li>Microsoft Rewards</li>
-                        <li>免費下載與安全性</li>
-                        <li>教育</li>
-                        <li>禮品卡</li>
-                        <li>Licensing/li>
+                    <div class="menuflex">
+                        <div class="menu-cards">
+                            <div class="menu-card">
+                                <ul>軟體</ul>
+                                <li> Windows應用程式</li>
+                                <li>OneDrive</li>
+                                <li>Outlook</li>
+                                <li>Skype</li>
+                                <li>OneNote</li>
+                                <li>Microsoft Teams</li>
+                            </div>
+                            <div class="menu-card">
+                                <ul>個人電腦與設備</ul>
+                                <li> 選購Xbox</li>
+                                <li> 電腦配件</li>
+                            </div>
+                            <div class="menu-card">
+                                <ul>娛樂</ul>
+                                <li> Xbox Game Pass Ultimate</li>
+                                <li>Xbox 與遊戲</li>
+                                <li>電腦遊戲</li>
+                                <li>Windows遊戲</li>
+                            </div>
+                            <div class="menu-card">
+                                <ul>商務適用</ul>
+                                <li>Microsoft Azure</li>
+                                <li>Microsoft Dynemics 365</li>
+                                <li>Microsoft 365</li>
+                                <li>Microsoft Industry</li>
+                                <li>資料平台</li>
+                                <li>Power Platform</li>
+                                <li>選購商務版</li>
+                            </div>
+                            <div class="menu-card">
+                                <ul>Deveioper&IT</ul>
+                                <li>.NET</li>
+                                <li>Visual Studio</li>
+                                <li>Windows Servre</li>
+                                <li>開發Windows應用程式</li>
+                                <li>文件</li>
+                                <li>Power Apps</li>
+                            </div>
+                            <div class="menu-card">
+                                <ul>其他</ul>
+                                <li>Microsoft Rewards</li>
+                                <li>免費下載與安全性</li>
+                                <li>教育</li>
+                                <li>禮品卡</li>
+                                <li>Licensing/li>
+                            </div>
+                        </div>
+                        <div class="map">檢視地圖</div>
                     </div>
                 </div>
             </div>
