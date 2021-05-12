@@ -14,8 +14,12 @@
             justify-content: end
         }
         
+        .dropdown-toggle::after {
+            display: none;
+        }
+        
         .carousel-item img {
-            height: 86vh;
+            height: auto;
             width: 90%;
         }
         
@@ -136,6 +140,12 @@
             color: white;
         }
         
+        .step.active-2 .round,
+        .step.active-3 .round {
+            background-color: rgb(15, 214, 131);
+            color: white;
+        }
+        
         .step.line::after {
             content: '';
             width: 63%;
@@ -148,9 +158,23 @@
             transform: translateY(-50%);
         }
         
+        .step.active-2.line::before,
         .step.active.line::before {
             content: '';
-            width: 30%;
+            width: 63%;
+            height: 6px;
+            background-color: rgb(15, 214, 131);
+            border-radius: 12px;
+            position: absolute;
+            right: -30%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+        }
+        
+        .step.active-3.line::before {
+            content: '';
+            width: 31%;
             height: 6px;
             background-color: rgb(15, 214, 131);
             border-radius: 12px;
@@ -258,6 +282,13 @@
             border-radius: 40px;
         } */
         
+        @media (max-width: 990px) {
+            #navbarTogglerDemo02 {
+                display: flex;
+                flex-direction: column
+            }
+        }
+        
         @media(max-width: 767px) {
             footer h1 {
                 margin-left: 160px;
@@ -268,6 +299,16 @@
             footer .col-lg-3 {
                 text-align: center;
             }
+            nav .btn-outline-secondary {
+                width: 100%;
+            }
+        }
+        
+        @media(max-width:628px) {
+            .lastbar {
+                display: flex;
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -275,37 +316,30 @@
 <body>
     <div class="container">
 
-        <nav class="navbar navbar-expand-lg navbar-light  justify-content-between ">
-            <!-- <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                                                                                          <span class="navbar-toggler-icon"></span>
-                                                                                        </button> -->
-
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
             <a class="navbar-brand" href="#">
                 <img src="./img/logo.svg" height="60px" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                                                                                          <span class="navbar-toggler-icon"></span>
-                                                                                        </button>
+                  <span class="navbar-toggler-icon"></span>
+                </button>
 
-
-            <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo01">
-                <!-- <a class="navbar-brand" href="#">Hidden brand</a>
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link d-flex justify-content-end" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item d-flex justify-content-end">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item d-flex justify-content-end">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                </ul> -->
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarTogglerDemo02">
                 <button type="button " class="btn btn-outline-secondary">Blog</button>
                 <button type="button " class="btn btn-outline-secondary">Portfolio</button>
                 <button type="button " class="btn btn-outline-secondary">About</button>
                 <button type="button " class="btn btn-outline-secondary">Contact</button>
-                <i class="fas fa-shopping-cart " style="margin-right:20px; margin-left :20px ;"></i>
-                <i class="fas fa-user-circle "></i>
+                <div class="icons d-flex flex-row">
+                    <i class="fas fa-shopping-cart " style="margin-right:20px; margin-left :20px ;margin-top: 12px;"></i>
+
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                            <i class="fas fa-user-circle "></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#" style="height: 90%;">log in</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </nav>
@@ -321,13 +355,13 @@
                     <div class="step active line">
                         <div class="round">1</div>
                     </div>
-                    <div class="step line">
+                    <div class="step active-2 line">
                         <div class="round">2</div>
                     </div>
-                    <div class="step line">
+                    <div class="step active-3 line">
                         <div class="round">3</div>
                     </div>
-                    <div class="step">
+                    <div class="step active-4">
                         <div class="round">4</div>
                     </div>
                 </div>
@@ -475,7 +509,7 @@
 
     </footer>
     <div class="row " style="background-color: #f3f4f6; width: 100%; ">
-        <div class="container d-flex justify-content-between align-items-center " style="padding: 15px 0; ">
+        <div class="container d-flex justify-content-between align-items-center lastbar" style="padding: 15px 0; ">
             <p style="display: flex; align-items: ;margin: 0px; ">© 2020 Tailblocks — @knyttneve</p>
             <img src="./img/數位方塊footer-icon.png " alt=" " style="width: auto; ">
         </div>

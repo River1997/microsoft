@@ -90,36 +90,75 @@
             bottom: -95px;
             left: 345px;
         }
+        
+        .imghid {
+            display: none;
+        }
+        
+        .right {
+            background-color: #162446;
+        }
+        
+        @media(max-width:1022px) {
+            .left {
+                display: none;
+            }
+            .right {
+                transition-property: ;
+                transition: .3s;
+                width: 100%;
+                background-image: none;
+                background-color: #525252;
+            }
+            .imghid {
+                display: flex;
+                justify-content: center;
+                margin-top: 80px;
+            }
+        }
     </style>
 </head>
 
 <body>
     <div class="row" style="height: 100vh; width: 100%;">
-        <div class="col-6" style="background-image: url(https://dummyimage.com/1920x1080);padding: 280px 100px 0; color: white;;">
-        <h1 style="font-size: 50px;">Keep it special</h1>
-        <p style="font-size: 30px;">Capture your personal memory in unique way, anywhere.</p>
-        <img src="./img/數位方塊icon.png" alt="" style="position: absolute; bottom: 0; right: 37%;">
+        <div class="col left" style="background-image: url(https://dummyimage.com/1920x1080);padding: 280px 100px 0; color: white;;">
+            <h1 style="font-size: 50px;">Keep it special</h1>
+            <p style="font-size: 30px;">Capture your personal memory in unique way, anywhere.</p>
+            <img src="./img/數位方塊icon.png" alt="" style="position: absolute; bottom: 0; right: 37%;">
         </div>
-        <div class="col-6" style="padding: 100px 150px; width: 50%;background-color:#162446;">
-            <div style="display: flex; margin-left: 100px;">
-                <img src="./img/數位方塊icon-3.png" alt="">
-                <h1 style="padding: 35px 5px 0; color: white;">數位方塊</h1>
+        <div class="col right" style="padding: 100px 150px; width: 50%;">
+            <div class="rightimg" style="display: flex; justify-content: center; ">
+                <img src="./img/數位方塊icon-3.png " alt=" ">
+                <h1 style="padding: 55px 5px 0; color: white; ">數位方塊</h1>
+            </div>
+            <div style="display: flex;justify-content: center; ">
+                <img src="./img/數位方塊icon-2.png " alt=" ">
             </div>
 
-            <img src="./img/數位方塊icon-2.png" alt="" style="margin-left: 130px;">
-            <p style="text-align: center; color: white;">or use email your account</p>
-            <div class="input-group flex-nowrap">
-                <div class="input-group-prepend">
+
+            <p style="text-align: center; color: white; ">or use email your account</p>
+            <div class="input-group flex-nowrap ">
+                <div class="input-group-prepend ">
                 </div>
-                <input type="text" class="form-control" placeholder="email" aria-label="Username" aria-describedby="addon-wrapping" style="background-color: black; margin: 20px; height: 40px; width: 80px;">
+                <input type="text " class="form-control " placeholder="email " aria-label="Username " aria-describedby="addon-wrapping " style="background-color: black; margin: 20px; height: 40px; width: 80px;border: none; ">
             </div>
-            <div class="input-group flex-nowrap">
-                <div class="input-group-prepend">
+            <div class="input-group flex-nowrap ">
+                <div class="input-group-prepend ">
                 </div>
-                <input type="text" class="form-control" placeholder="password" aria-label="Username" aria-describedby="addon-wrapping" style="background-color: black; margin: 20px; height: 40px; width: 80px;">
+                <input type="text " class="form-control " placeholder="password " aria-label="Username " aria-describedby="addon-wrapping " style="background-color: black; margin: 20px; height: 40px; width: 80px;border: none; ">
             </div>
-            <p style="text-align: right; color: white;">Forgot your password?</p>
-            <button type="button" class="btn btn-primary" style="height: 60px; width: 400px;margin-left: 40px; border-radius: 40px;">SIGN IN</button>
+            <p style="text-align: right; color: white; ">Forgot your password?</p>
+
+            <div style="display: flex;justify-content: end; ">
+                <button type="button " class="btn btn-primary m-auto " style="height: 60px; width: 60%;margin-left: 40px; border-radius: 40px; ">SIGN IN</button>
+            </div>
+
+
+            <div class="imghid ">
+                <img src="./img/數位方塊icon.png " alt=" ">
+            </div>
+
+
 
 
         </div>
@@ -130,7 +169,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
 
-    
+
 
 </body>
 

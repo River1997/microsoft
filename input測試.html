@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .item {
+            display: flex;
+        }
+        
+        #number {
+            width: 50px;
+        }
+        
+        .addbtn,
+        .subbtn {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="item">
+        <div class="addbtn" id="addbtn" onclick="add(this)">+</div>
+        <input type="text" id="number" value="1" onchange="change(this) ">
+        <div class="subbtn " id="subbtn " onclick="sub(this) ">-</div>
+        <div data-price="40 " class="price ">$40</div>
+    </div>
+
+    <div class="item ">
+        <div class="addbtn " id="addbtn " onclick="add(this) ">+</div>
+        <input type="text " id="number" value="1" onchange="change(this)">
+        <div class="subbtn" id="subbtn" onclick="sub(this)">-</div>
+        <div data-price="10" class="price">$10</div>
+    </div>
+
+    <div class="item">
+        <div class="addbtn" id="addbtn" onclick="add(this)">+</div>
+        <input type="text" id="number" value="1" onchange="change(this) ">
+        <div class="subbtn " id="subbtn " onclick="sub(this) ">-</div>
+        <div data-price="10" class="price ">$10</div>
+    </div>
+
+    <div class="total ">
+        <div data-amount="0 " class="amount ">$3</div>
+        <div class="sum ">$30</div>
+        <div class="ship price ">$45</div>
+        <div class="totalsum ">$75</div>
+    </div>
+
+    <script>
+        var a = document.querySelector('.amount')
+
+        var b = document.querySelector('.sum')
+
+        var c = document.querySelector('.totalsum')
+
+        var all = document.querySelectorAll('#number')
+
+        var allprice = document.querySelectorAll('.price')
+
+        console.log(c)
+
+
+
+
+        function add(ele) {
+            let number = ele.parentNode.children[1];
+            let price = ele.parentNode.children[3];
+
+            number.value = parseInt(number.value) + 1;
+            price.innerHTML = '$' + parseInt(number.value) * parseFloat(price.dataset.price);
+            //             let amount = ele.parentNode.nextSibling.children[0];
+
+            for (let index = 0; index < all.length; index++) {
+                a.innerHTML = parseInt(all[0].value) + parseInt(all[1].value) + parseInt(all[2].value)
+                b.innerHTML = parseInt(all[0].value) * 40 + parseInt(all[1].value) * 10 + parseInt(all[2].value) * 10
+                c.innerHTML = parseInt(all[0].value) * 40 + parseInt(all[1].value) * 10 + parseInt(all[2].value) * 10 + 45
+
+                //                 (a.value).innerHTML += parseInt(all[index])
+            }
+
+
+        }
+
+        function sub(ele) {
+            let number = ele.parentNode.children[1];
+            let price = ele.parentNode.children[3];
+            number.value = parseInt(number.value) - 1;
+            if (number.value > 0) {
+                price.innerHTML = '$' + parseInt(number.value) * parseInt(price.dataset.price)
+            } else {
+                number.value = '1'
+            }
+        }
+
+        function change(ele) {
+            let number = ele.parentNode.children[1];
+            let price = ele.parentNode.children[3];
+            if (number.value > 0) {
+                price.innerHTML = '$' + parseInt(number.value) * parseInt(price.dataset.price)
+            } else {
+                number.value = '1'
+            }
+        }
+    </script>
+
+</body>
+
+</html>
