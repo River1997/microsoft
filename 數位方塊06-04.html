@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <style>
+        .navbar {
+            justify-content: end
+        }
+        
+        nav .dropdown-toggle::after {
+            display: none;
+        }
+        
+        main.dropdown-toggle::after {
+            display: block;
+        }
+        
+        .carousel-item img {
+            height: auto;
+            width: 90%;
+        }
+        
+        nav .btn {
+            width: 90px;
+            height: 50px;
+            margin: 0 10px;
+            border: none;
+            font-weight: 700;
+            color: black;
+        }
+        
+        .card {
+            border: none;
+        }
+        
+        .svgimg {
+            width: 40px;
+            height: 40px;
+            margin: auto;
+        }
+        
+        .svgimg-2 {
+            width: 64px;
+            height: 64px;
+        }
+        
+        main .btn {
+            border: none;
+        }
+        
+        p {
+            font-size: 20px;
+        }
+        
+        h1 {
+            font-size: 30px;
+        }
+        
+        .col-6 .row .col {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        
+        .col-6 .row .col img {
+            /* width: 50%; */
+        }
+        
+        .background {
+            min-width: 128px;
+            height: 128px;
+            background-color: #e0e7ff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 999em;
+            margin: 0px;
+        }
+        
+        .card-title-1 {
+            font-size: 50px;
+            position: relative;
+        }
+        
+        .card-title-1::after {
+            content: '';
+            width: 80px;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+            bottom: -95px;
+            left: 345px;
+        }
+        
+        .pitchtitle {
+            position: relative;
+        }
+        
+        .pitchtitle::after {
+            content: '';
+            width: 80px;
+            height: 2px;
+            background-color: blue;
+            position: absolute;
+            bottom: 30px;
+            left: 0px;
+        }
+        
+        footer p {
+            font-size: 18px;
+        }
+        
+        .titlecolor {
+            width: 60px;
+            height: 60px;
+            background-color: chartreuse;
+            border-radius: 50%;
+        }
+        
+        @media (max-width: 990px) {
+            #navbarTogglerDemo02 {
+                display: flex;
+                flex-direction: column
+            }
+            .dropdown-menu {
+                margin-left: -300px;
+                width: 78vh;
+            }
+        }
+        
+        @media(max-width: 767px) {
+            footer h1 {
+                margin-left: 160px;
+            }
+            footer .col-lg-4 p {
+                margin-left: 50px;
+            }
+            footer .col-lg-3 {
+                text-align: center;
+            }
+            nav .btn-outline-secondary {
+                width: 100%;
+            }
+            .dropdown-item {
+                width: 500px;
+            }
+        }
+        
+        @media(max-width:628px) {
+            .lastbar {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light d-flex justify-content-between">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.svg" height="60px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarTogglerDemo02">
+                <button type="button " class="btn btn-outline-secondary">Blog</button>
+                <button type="button " class="btn btn-outline-secondary">Portfolio</button>
+                <button type="button " class="btn btn-outline-secondary">About</button>
+                <button type="button " class="btn btn-outline-secondary">Contact</button>
+                <div class="icons d-flex flex-row">
+                    <i class="fas fa-shopping-cart " style="margin-right:20px; margin-left :20px ;margin-top: 12px;"></i>
+
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+                            <i class="fas fa-user-circle "></i>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item " href="# " style="width: ; ">log in</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+
+
+    </div>
+    <div id="carouselExampleIndicators " class="carousel slide " data-ride="carousel ">
+        <ol class="carousel-indicators ">
+            <li data-target="#carouselExampleIndicators " data-slide-to="0 " class="active "></li>
+            <li data-target="#carouselExampleIndicators " data-slide-to="1 "></li>
+            <li data-target="#carouselExampleIndicators " data-slide-to="2 "></li>
+        </ol>
+        <div class="carousel-inner ">
+            <div class="carousel-item active " style="width: 100%;height: auto; ">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/40/Field_in_K%C3%A4rk%C3%B6l%C3%A4.jpg " class="d-block w-100 " alt="... ">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://www.centreformenaustralia.org.au/wordpress/wp-content/uploads/2019/06/field2.jpg " class="d-block w-100 " alt="... ">
+            </div>
+            <div class="carousel-item ">
+                <img src="https://runfreedogfields.co.uk/wp-content/uploads/2020/08/Cambuslang-country-field-scaled.jpg " class="d-block w-100 " alt="... ">
+            </div>
+        </div>
+        <a class="carousel-control-prev " href="#carouselExampleIndicators " role="button " data-slide="prev ">
+            <span class="carousel-control-prev-icon " aria-hidden="true "></span>
+            <span class="sr-only ">Previous</span>
+        </a>
+        <a class="carousel-control-next " href="#carouselExampleIndicators " role="button " data-slide="next ">
+            <span class="carousel-control-next-icon " aria-hidden="true "></span>
+            <span class="sr-only ">Next</span>
+        </a>
+    </div>
+
+    <main>
+        <div class="container ">
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center ">
+                    <div class="card " style="width: 50rem; text-align: center;margin: 50px 0; ">
+                        <div class="card-body ">
+                            <h5 class="card-title card-title-1 ">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-lg-4 ">
+                    <div class="card " style="text-align: center ">
+                        <!-- <img src="... " class="card-img-top " alt="... "> -->
+                        <div class="titlecolor " style="margin: auto;display: flex;justify-content: center; ">
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-10 h-10 svgimg " viewBox="0 0 24 24 ">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2 "></path>
+                            </svg>
+                        </div>
+
+                        <div class="card-body ">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="# " class="btn btn-primary ">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="card " style="text-align: center ">
+                        <!-- <img src="... " class="card-img-top " alt="... "> -->
+                        <div class="titlecolor " style="margin: auto;display: flex;justify-content: center; ">
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-10 h-10 svgimg " viewBox="0 0 24 24 ">
+                                <circle cx="6 " cy="6 " r="3 "></circle>
+                                <circle cx="6 " cy="18 " r="3 "></circle>
+                                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12 "></path>
+                            </svg>
+                        </div>
+
+                        <div class="card-body ">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="# " class="btn btn-primary ">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="card " style="text-align: center ">
+                        <div class="titlecolor " style="margin: auto;display: flex;justify-content: center; ">
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-10 h-10 svgimg " viewBox="0 0 24 24 ">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2 "></path>
+                                <circle cx="12 " cy="7 " r="4 "></circle>
+                            </svg>
+                        </div>
+                        <!-- <img src="... " class="card-img-top " alt="... "> -->
+
+                        <div class="card-body ">
+                            <h5 class="card-title ">Card title</h5>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="# " class="btn btn-primary ">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row " style="margin: 30px 0; ">
+                <button type="button " class="btn btn-primary " style="margin: auto; ">Button</button>
+            </div>
+
+            <div class="row ">
+                <div class="col-4 ">
+                    <h1>Master Cleanse Reliac Heirloom</h1>
+                </div>
+                <div class="col-8 ">
+                    <p>Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-6 ">
+                    <div class="row ">
+                        <div class="col flex-row ">
+                            <img src="https://dummyimage.com/500x300 " alt=" " style="width: calc(50% - 7.5px); margin: 0 15px 10px 0; ">
+                            <img src="https://dummyimage.com/501x301 " alt=" " style="width: calc(50% - 7.5px) ;margin: 0 0 10px; 0 ">
+                            <img src="https://dummyimage.com/600x360 " alt=" " style="width: 100%; ">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-6 ">
+                    <div class="row ">
+                        <div class="col flex-row-reverse ">
+                            <img src="https://dummyimage.com/600x360 " alt=" " style="width: 100%; ">
+                            <img src="https://dummyimage.com/500x300 " alt=" " style="width: calc(50% - 7.5px); margin: 10px 0px 0px 15px; ">
+                            <img src="https://dummyimage.com/501x301 " alt=" " style="width: calc(50% - 7.5px); margin: 10px 0 0px; 0 ">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-12 d-flex justify-content-center ">
+                    <div class="card " style="width: 50rem; text-align: center;margin: 50px 0; ">
+                        <div class="card-body ">
+                            <h5 class="card-title ">Card title</h5>
+                            <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-3 " style="padding:0; border-radius: unset; ">
+                    <div class="card " style="width: 100%; ">
+
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item " style="background-color: gray; border-radius: unset;">Cras justo odio </li>
+                            <li class="list-group-item ">Cras justo odio</li>
+                            <li class="list-group-item ">Dapibus ac facilisis in</li>
+                            <li class="list-group-item ">Vestibulum at eros</li>
+                            <li class="list-group-item ">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body ">
+                            <a href="# " class="card-link ">Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 " style="padding:0; border-radius: unset; ">
+                    <div class="card " style="width: 100%; ">
+
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item " style="background-color: gray; border-radius: unset;">Cras justo odio </li>
+                            <li class="list-group-item ">Cras justo odio</li>
+                            <li class="list-group-item ">Dapibus ac facilisis in</li>
+                            <li class="list-group-item ">Vestibulum at eros</li>
+                            <li class="list-group-item ">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body "></div>
+                    </div>
+                </div>
+                <div class="col-3 " style="padding:0; border-radius: unset; ">
+                    <div class="card " style="width: 100%; ">
+
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item " style="background-color: gray; border-radius: unset;">Cras justo odio </li>
+                            <li class="list-group-item ">Cras justo odio</li>
+                            <li class="list-group-item ">Dapibus ac facilisis in</li>
+                            <li class="list-group-item ">Vestibulum at eros</li>
+                            <li class="list-group-item ">Vestibulum at eros</li>
+                        </ul>
+                        <div class="card-body "></div>
+                    </div>
+                </div>
+                <div class="col-3 " style="padding:0; border-radius: unset; ">
+                    <div class="card " style="width: 100%; ">
+
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item " style="background-color: gray; border-radius: unset;">Cras justo odio </li>
+                            <li class="list-group-item d-flex justify-content-between ">Cras<input type="radio" name="right"></li>
+                            <li class="list-group-item d-flex justify-content-between ">Dapibus <input type="radio" name="right"></li>
+                            <li class="list-group-item d-flex justify-content-between ">Vestibulum<input type="radio" name="right"></li>
+                            <li class="list-group-item d-flex justify-content-between ">Vestibulum<input type="radio" name="right"></li>
+                        </ul>
+                        <div class="card-body d-flex justify-content-end ">
+                            <button type="button " class="btn btn-primary ">Primary</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row " style="margin: 100px 0; ">
+                <div class="col-4 pitchtitle ">
+                    <h1>Pitchfork Kickstarter Taxidermy</h1>
+                </div>
+                <div class="col-8 ">
+                    <p>Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom.</p>
+                </div>
+            </div>
+            <div class="row " style="margin: 100px 0; ">
+                <div class="col-lg-3 ">
+                    <div class="card " style="background-color: gray; padding: 20px; margin-bottom: 30px; ">
+                        <img src="https://dummyimage.com/720x400 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card " style="background-color: gray; padding: 20px; margin-bottom: 30px; ">
+                        <img src="https://dummyimage.com/721x401 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card " style="background-color: gray; padding: 20px; margin-bottom: 30px; ">
+                        <img src="https://dummyimage.com/722x402 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card " style="background-color: gray; padding: 20px; margin-bottom: 30px; ">
+                        <img src="https://dummyimage.com/723x403 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row " style="margin: 50px 0; ">
+                <div class="card m-auto " style="width: 90%; ">
+                    <div class="card-body d-flex justify-content-between ">
+                        <div class="background " style="margin: 0px 35px; ">
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="sm:w-16 sm:h-16 w-10 h-10 svgimg-2 " viewBox="0 0 24 24 ">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2 "></path>
+                            </svg>
+                        </div>
+                        <div style="font-size: 20px; ">
+                            <h5 class="card-title " style="font-size: 20px; ">Card title</h5>
+                            <p class="card-text " style="font-size: 20px; ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href=" ">Learn More</a>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item "></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row " style="margin: 50px 0; ">
+                <div class="card m-auto " style="width: 90%; ">
+                    <div class="card-body d-flex justify-content-between ">
+                        <div style="font-size: 20px; ">
+                            <h5 class="card-title " style="font-size: 20px; ">Card title</h5>
+                            <p class="card-text " style="font-size: 20px; ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href=" ">Learn More</a>
+                        </div>
+                        <div class="background " style="margin: 0px 35px; ">
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="sm:w-16 sm:h-16 w-10 h-10 svgimg-2 " viewBox="0 0 24 24 ">
+                                <circle cx="6 " cy="6 " r="3 "></circle>
+                                <circle cx="6 " cy="18 " r="3 "></circle>
+                                <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12 "></path>
+                              </svg>
+                        </div>
+
+                    </div>
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item "></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row " style="margin: 50px 0; ">
+                <div class="card m-auto " style="width: 90%; ">
+                    <div class="card-body d-flex justify-content-between ">
+                        <div class="background " style="margin: 0px 35px; ">
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="sm:w-16 sm:h-16 w-10 h-10 svgimg-2 " viewBox="0 0 24 24 ">
+                                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2 "></path>
+                                <circle cx="12 " cy="7 " r="4 "></circle>
+                              </svg>
+                        </div>
+                        <div style="font-size: 20px; ">
+                            <h5 class="card-title " style="font-size: 20px; ">Card title</h5>
+                            <p class="card-text " style="font-size: 20px; ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href=" ">Learn More</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row " style="margin: 100px 0; ">
+                <button type="button " class="btn btn-primary " style="margin: auto; ">Button</button>
+            </div>
+
+            <div class="row " style="margin: 30px 0;height: 100vh;padding-top: 150px; ">
+                <div class="col-lg-6 ">
+                    <img src="https://dummyimage.com/400x400 " class="card-img-top " alt="... ">
+                </div>
+                <div class="col-lg-6 " style="">
+                    <div class="card-body ">
+                        <p>BRAND NAME</p>
+                        <h5 class="card-title ">The Catcher in the Rye</h5>
+                        <div class="star" style="display:flex;">
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 text-indigo-500 " viewBox="0 0 24 24 " style="width: 16px;height: 16px; color: #4f46e5;">
+                                <path d=" M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z ">
+                                </path>
+                              </svg>
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 text-indigo-500 " viewBox="0 0 24 24 " style="width: 16px;height: 16px; color: #4f46e5;">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z ">
+                                </path>
+                              </svg>
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 text-indigo-500 " viewBox="0 0 24 24 " style="width: 16px;height: 16px; color: #4f46e5;">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z ">
+                                </path>
+                              </svg>
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 text-indigo-500 " viewBox="0 0 24 24 " style="width: 16px;height: 16px; color: #4f46e5;">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z ">
+                                </path>
+                              </svg>
+                            <svg fill="none " stroke="currentColor " stroke-linecap="round " stroke-linejoin="round " stroke-width="2 " class="w-4 h-4 text-indigo-500 " viewBox="0 0 24 24 " style="width: 16px;height: 16px; color: #4f46e5;">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z ">
+                                </path>
+                            </svg>
+                            <span>4 Reviews</span>
+                            <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
+                                <a class="text-gray-500">
+                                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                  </svg>
+                                </a>
+                                <a class="text-gray-500">
+                                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                                    </path>
+                                  </svg>
+                                </a>
+                                <a class="text-gray-500">
+                                  <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                                    </path>
+                                  </svg>
+                                </a>
+                              </span>
+                        </div>
+
+                        <p class="card-text " style="font-size: 15px; ">Fam locavore kickstarter distillery. Mixtape chillwave tumeric sriracha taximy chia microdosing tilde DIY. XOXO fam indxgo juiceramps cornhole raw denim forage brooklyn. Everyday carry +1 seitan poutine tumeric. Gastropub blue
+                            bottle austin listicle pour-over, neutra jean shorts keytar banjo tattooed umami cardigan.</p>
+
+                        <div style="display:flex">
+                            <p style="margin-right: 5px;">Color</p>
+                            <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" style="width: 24px;height: 24px;border-radius:24px;margin-right: 5px;margin-top:5px ;"></button>
+                            <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" style="width: 24px;height: 24px;border-radius:24px;margin-right: 5px;margin-top:5px ;"></button>
+                            <button class="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none" style="width: 24px;height: 24px;border-radius:24px;margin-right: 5px;margin-top:5px ;"></button>
+                            <div class="dropdown" style="margin-bottom: 25px;margin-left: 20px;">
+                                <span style="margin-right: 40px;">Size</span>
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;background-color: white;border: black;border-style: outset;">
+                                  M
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                    <button class="dropdown-item" type="button">Action</button>
+                                    <button class="dropdown-item" type="button">Another action</button>
+                                    <button class="dropdown-item" type="button">Something else here</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <ul class="list-group list-group-flush ">
+                            <li class="list-group-item "></li>
+
+
+
+
+
+                        </ul>
+                        <span>$58</span>
+
+                        <a href="# " class="btn btn-primary " style="float: right; ">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/420x260 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/421x261 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/422x262 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/423x263 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/424x264 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/425x265 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/426x266 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 ">
+                    <div class="card ">
+                        <img src="https://dummyimage.com/427x267 " class="card-img-top " alt="... ">
+                        <div class="card-body ">
+                            <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </main>
+
+    <div class="row " style="position: relative;width: 100%; ">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3637.716529067278!2d120.71811311499089!3d24.251691384344568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691a0f76c278fd%3A0x2877808fa5ca752d!2z5LiK55uK6LOH6KiK!5e0!3m2!1szh-TW!2stw!4v1619167275176!5m2!1szh-TW!2stw "
+            width="100% " height="600px " style="border:0;filter: grayscale(0.7); " allowfullscreen=" " loading="lazy "></iframe>
+
+        <div class="card " style="position: absolute; top: 50px; right: 50px; width: 500px; ">
+            <div class="card-body ">
+                <h5 class="card-title ">feedback</h5>
+                <p class="card-text ">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p>email</p>
+                <input type="text " style="width: 450px; ">
+                <p>message</p>
+                <input type="text " style="width: 450px; height: 80px; ">
+                <a href="# " class="btn btn-primary " style="width: 450px; margin-top:40px; ">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container ">
+            <div class="row " style="padding: 100px 5px; ">
+                <div class="col-lg-4 col-md-6 ">
+                    <h1 style="font-size: 15px; ">
+                        <img src=" ./img/數位方塊小Logo.png " alt=" "> 數位方塊
+                    </h1>
+                    <p>Air plant banjo lyft occupy retro adaptogen indego</p>
+                </div>
+                <div class="col-lg-8 col-md-6 d-flex ">
+                    <div class="row d-flex justify-content-between " style="width: 100%; ">
+                        <div class="col-lg-3 col-md-6 " style="line-height: 20px; ">
+                            <h1 style="font-size: 18px;margin: 25px 0 15px; ">CATEGORIES</h1>
+                            <p style="font-style: 8px; ">First Link</p>
+                            <p>Second Link</p>
+                            <p>Third Link</p>
+                            <p>Fourth Link</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 " style="line-height: 20px; ">
+                            <h1 style="font-size: 18px;margin: 25px 0 15px; ">CATEGORIES</h1>
+                            <p style="font-style: 8px; ">First Link</p>
+                            <p>Second Link</p>
+                            <p>Third Link</p>
+                            <p>Fourth Link</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 " style="line-height: 20px; ">
+                            <h1 style="font-size: 18px;margin: 25px 0 15px; ">CATEGORIES</h1>
+                            <p style="font-style: 8px; ">First Link</p>
+                            <p>Second Link</p>
+                            <p>Third Link</p>
+                            <p>Fourth Link</p>
+                        </div>
+                        <div class="col-lg-3 col-md-6 " style="line-height: 20px; ">
+                            <h1 style="font-size: 18px;margin: 25px 0 15px; ">CATEGORIES</h1>
+                            <p style="font-style: 8px; ">First Link</p>
+                            <p>Second Link</p>
+                            <p>Third Link</p>
+                            <p>Fourth Link</p>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </footer>
+    <div class="row " style="background-color: #f3f4f6; width: 100%; ">
+        <div class="container d-flex justify-content-between align-items-center lastbar " style="padding: 15px 0; ">
+            <p style="display: flex; align-items: ;margin: 0px; ">© 2020 Tailblocks — @knyttneve</p>
+            <img src="./img/數位方塊footer-icon.png " alt=" " style="width: auto; ">
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js " integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo " crossorigin="anonymous "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js " integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut " crossorigin="anonymous "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js " integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k " crossorigin="anonymous "></script>
+
+
+
+</body>
+
+</html>
+
+</html>
+
+</html>
+
+</html>
